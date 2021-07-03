@@ -1,6 +1,6 @@
 import java.awt.Button;
-import java.awt.FlowLayout;
 import java.awt.Frame;
+import java.awt.GridLayout;
 import java.awt.Label;
 import java.awt.TextField;
 
@@ -18,9 +18,14 @@ public class GUIOne {
 			TextField t1=new TextField(10);
 			TextField t2=new TextField(10);
 			Button b1=new Button("Save");
+			Button b2=new Button("Exit");
 		//step-3	(add the components on container)
-			f.setLayout(new FlowLayout());
+			//FlowLayout fL=new FlowLayout();
+			GridLayout gL=new GridLayout(3,2);
+			f.setLayout(gL);
 			f.add(l1);		f.add(t1);		f.add(l2);		f.add(t2);		f.add(b1);
+			f.add(b2);
+			//f.add("North",l1); f.add("South",t1);
 			f.pack();
 			
 	}
